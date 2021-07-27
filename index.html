@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Site Structure -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatiable" content="ie-edge">
+
+     <!-- Favicon -->
+    <!-- <link rel="icon" type="image/png" href="./assets/favicon.png"> -->
+
+    <!-- Site Information  -->
+    <title>Brandon's FrontEnd Samples</title>
+    <meta name="description" content="Welcome to my frontend website samples">
+    <meta name="robots" content="index, follow">
+    <meta name="copyright" content="Copyright 2021">
+    <meta name="author" content="Author's Name">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=GOOGLE-KEY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'GOOGLE-KEY');
+    </script> -->
+
+    <!-- CSS Styles -->
+
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/skeleton.css">
+    <link rel="stylesheet" href="./styles/navbar.css">
+    <link rel="stylesheet" href="./styles/custom.css">
+
+    <!-- JaveScript  -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+        crossorigin="anonymous"></script>
+
+    <!-- JavaScript Custom -->
+    <script src="./js/navbar.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+
+    <!-- DateTimePicker -->
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+    <!-- Image pop up  -->
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+          $(".fancybox").fancybox();
+    
+          $(".fancybox")
+            .attr('rel', 'gallery')
+            .fancybox({
+              padding: 0,
+              nextEffect: 'fade',
+              prevEffect: 'none',
+              autoCenter: false,
+              afterLoad: function() {
+                $.extend(this, {
+                  aspectRatio: false,
+                  type: 'html',
+                  width: '50%',
+                  height: '50%',
+                  content: '<div class="fancybox-image" style="background-image:url(' + this.href + '); background-size: cover; background-position:100% 100%;background-repeat:no-repeat;height:100%;width:100%;" /></div>'
+                });
+              }
+            });
+        });
+    </script>
+
+    <!-- Add mousewheel plugin (this is optional) -->
+    <script type="text/javascript" src="./fancybox/lib/jquery.mousewheel.pack.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+    <!-- Add fancyBox -->
+    <link rel="stylesheet" href="./fancybox/source/jquery.fancybox.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="./fancybox/source/jquery.fancybox.pack.js"></script>
+
+    <!-- Carousel Slider  -->
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jcarousel/0.3.9/jquery.jcarousel.min.js"></script>
+    <script type="text/javascript" src="./js/jcarousel.basic.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/jcarousel.basic.css">
+
+    <!-- WYSIWYG -->
+    <script src="https://cloud.tinymce.com/5/tinymce.min.js"></script>
+    <script>
+        tinymce.init({
+        selector: 'textarea'
+        });
+    </script>
+    
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            $(selector).datepick({
+                dateFormat: 'yyyy-mm-dd'
+            });
+
+            $(".jcarousel")
+            .jcarousel({
+                wrap: "circular"
+            })
+
+            .jcarouselAutoscroll({
+                interval: 3000,
+                target: '+=1',
+                autostart: true,
+            });
+
+        });
+
+    </script>
+
+
+</head>
+
+<body>
+    <div class="u-max-full-width">
+        <nav class="navbar" id="navbar">
+            <div class="navbar-container">
+                <div class="logo links">
+                    <a href="/"><img src="./assets/logo.svg" alt="brand-logo"></a>
+                </div>
+                <div class="u-pull-right links">
+                    <a href="/"><h5>Home</h5></a>
+                    <a href="/"><h5>About</h5></a>
+                    <a href="/"><h5>Blog</h5></a>
+                    <a href="#contact"><h5>Contact</h5></a>
+
+                    <a href="javascript:void(0);" class="icon" onclick="navbar()">&#9776;</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="twelve columns welcome-message">
+                <!-- Welcome Message  -->
+                <h2>Welcome to my FrontEnd Sample page!</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="twelve columns">
+                <!-- Description Message  -->
+                <h6>Below you will find various examples of webpage functions and fun things JavaScript can do for your website. I have used Skeleton responsive boilerplate to keep the design simple.</h6>
+            </div>
+        </div>
+
+        <!-- Content  -->
+        <div class="center title-sections">
+            <h4>Sortable Table</h4>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="twleve columns">
+                    <table id="table_id" class="u-full-width" >
+                        <thead>
+                          <tr>
+                            <th>First Name</th>
+                            <th>Last Name</th>
+                            <th>Super Hero Name</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Tony</td>
+                            <td>Stark</td>
+                            <td>Iron Man</td>
+                          </tr>
+                          <tr>
+                            <td>Steve</td>
+                            <td>Rogers</td>
+                            <td>Captain America</td>
+                          </tr>
+                          <tr>
+                            <td>Natasha</td>
+                            <td>Romanoff</td>
+                            <td>Black Widow</td>
+                          </tr>
+                          <tr>
+                            <td>Bruce</td>
+                            <td>Banner</td>
+                            <td>Hulk</td>
+                          </tr>
+                          <tr>
+                            <td>Peter</td>
+                            <td>Parker</td>
+                            <td>Spider-Man</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="container title-sections">
+            <div class="row">
+                <div class="twelve columns center">
+                    <form1>
+                        <h4>Pick Date and Time:</h4>
+                        <input type="datetime-local" name="datetime">
+                      </form1>
+                </div>
+            </div>
+        </div>
+
+        <div class="container center title-sections">
+            <h4>Image Pop ups</h4>
+            <div class="row">
+                <div class="six columns">
+                    <a class="fancybox" rel="group" href="img/spiderMan.png"><img style="max-width: 100px; max-height: auto" src="img/spiderMan.png" alt="" /></a>
+                </div>
+                <div class="six columns">
+                    <a class="fancybox" rel="group" href="img/ironMan.png"><img style="max-width: 100px; max-height: auto" src="img/ironMan.png" alt="" /></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="six columns">
+                    <a class="fancybox" rel="group" href="img/captainAmerica.png"><img style="max-width: 100px; max-height: auto" src="img/captainAmerica.png" alt="" /></a>
+                </div>
+                <div class="six columns">
+                    <a class="fancybox" rel="group" href="img/hulk.png"><img style="max-width: 100px; max-height: auto" src="img/hulk.png" alt="" /></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container title-sections center">
+            <h4>Carousel Slider</h4>
+            <div class="row u-full-width">
+                <div class="container">
+                <div class="twelve columns">
+                    <div class="jcarousel container">
+                        <ul >
+                          <li><img name="spiderMan" src="img/spiderMan.png" alt="spider-man"></li>
+                          <li><img name="ironMan" src="img/ironMan.png" alt="iron-man"></li>
+                          <li><img name="captainAmerica" src="img/captainAmerica.png"  alt="captain-america"></li>
+                          <li><img name="hulk" src="img/hulk.png"  alt="hulk"></li>
+                          <li><img name="captainMarvel" src="img/captainMarvel.png" alt="captian-marvel"></li>
+                        </ul>
+                    </div>
+                    <!-- Prev/next controls -->
+                    <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+                    <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+                    <!-- Pagination -->
+                    <p class="jcarousel-pagination"></p>
+                </div>
+            </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="row">
+                <div class="twelve columns">
+                    <h4 class="title-sections center">What You See Is What You Get</h4>
+                    <p style="text-align: center;">TinyMCE</p>
+                    <textarea>Next, get a free Tiny Cloud API key!</textarea>
+                </div>
+            </div>
+        </div>
+        <div class="container title-sections">
+
+            <form id="form1" name="form1" method="POST" action="javascript:submitForm();">
+                <div class="center">
+                    <h4>Contact Us</h4>
+                </div>
+                    <div class="card" >
+                        <div class="row" >
+                            <div class="six columns">
+                                <label for="field">First Name*</label>
+                                <input type="text" name="firstName" id="firstName" value=""  />
+                                <span id="firstNameError" class="errors">*required</span>
+                            </div>
+                            <div class="six columns">
+                                <label for="field">Last Name*</label>
+                                <input type="text" name="lastName" id="lastName" value="" />
+                                <span id="lastNameError" class="errors">*required</span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="six columns">
+                                <label for="field">Street Address*</label>
+                                <input type="text" name="streetAddress" id="streetAddress" value="" />
+                                <span id="streetAddressError" class="errors">*required</span>
+                            </div>
+                            <div class="six columns">
+                                <label for="field">Street Address Option 2</label>
+                                <input type="text" name="streetAddress2" id="streetAddress2" value="" />
+                            </div>
+                        </div>
+
+                        <div class="row" >
+                            <div class="six columns">
+                                <label for="country">Country*</label>
+                                <select name="country" id="country">
+                                    <option value=""></option>
+                                    <option value="Canada">Canada</option>
+                                    <option value="United States">United States</option>
+                                </select>
+                                <span id="countryError" class="errors">*required</span>
+                            </div>
+                            <div class="six columns">
+                                <label for="provinceState">Province / State*</label>
+                                <select name="provinceState" id="provinceState">
+                                    <option value=""></option>
+                                    <option value="AB">Alberta</option>
+                                    <option value="BC">British Columbia</option>
+                                    <option value="MB">Manitoba</option>
+                                    <option value="NB">New Brunswick</option>
+                                    <option value="NL">Newfoundland and Labrador</option>
+                                    <option value="NS">Nova Scotia</option>
+                                    <option value="ON">Ontario</option>
+                                    <option value="PE">Prince Edward Island</option>
+                                    <option value="QC">Quebec</option>
+                                    <option value="SK">Saskatchewan</option>
+                                    <option value="NT">Northwest Territories</option>
+                                    <option value="NU">Nunavut</option>
+                                    <option value="YT">Yukon</option>
+                                    <option value="AL">Alabama</option>
+                                    <option value="AK">Alaska</option>
+                                    <option value="AZ">Arizona</option>
+                                    <option value="AR">Arkansas</option>
+                                    <option value="CA">California</option>
+                                    <option value="CO">Colorado</option>
+                                    <option value="CT">Connecticut</option>
+                                    <option value="DE">Delaware</option>
+                                    <option value="DC">District Of Columbia</option>
+                                    <option value="FL">Florida</option>
+                                    <option value="GA">Georgia</option>
+                                    <option value="HI">Hawaii</option>
+                                    <option value="ID">Idaho</option>
+                                    <option value="IL">Illinois</option>
+                                    <option value="IN">Indiana</option>
+                                    <option value="IA">Iowa</option>
+                                    <option value="KS">Kansas</option>
+                                    <option value="KY">Kentucky</option>
+                                    <option value="LA">Louisiana</option>
+                                    <option value="ME">Maine</option>
+                                    <option value="MD">Maryland</option>
+                                    <option value="MA">Massachusetts</option>
+                                    <option value="MI">Michigan</option>
+                                    <option value="MN">Minnesota</option>
+                                    <option value="MS">Mississippi</option>
+                                    <option value="MO">Missouri</option>
+                                    <option value="MT">Montana</option>
+                                    <option value="NE">Nebraska</option>
+                                    <option value="NV">Nevada</option>
+                                    <option value="NH">New Hampshire</option>
+                                    <option value="NJ">New Jersey</option>
+                                    <option value="NM">New Mexico</option>
+                                    <option value="NY">New York</option>
+                                    <option value="NC">North Carolina</option>
+                                    <option value="ND">North Dakota</option>
+                                    <option value="OH">Ohio</option>
+                                    <option value="OK">Oklahoma</option>
+                                    <option value="OR">Oregon</option>
+                                    <option value="PA">Pennsylvania</option>
+                                    <option value="RI">Rhode Island</option>
+                                    <option value="SC">South Carolina</option>
+                                    <option value="SD">South Dakota</option>
+                                    <option value="TN">Tennessee</option>
+                                    <option value="TX">Texas</option>
+                                    <option value="UT">Utah</option>
+                                    <option value="VT">Vermont</option>
+                                    <option value="VA">Virginia</option>
+                                    <option value="WA">Washington</option>
+                                    <option value="WV">West Virginia</option>
+                                    <option value="WI">Wisconsin</option>
+                                    <option value="WY">Wyoming</option>
+                                </select>
+                                <span id="provinceStateError" class="errors">*required</span>
+                            </div>
+                        </div>
+                            
+                        <div class="row">
+                            <div class="six columns">
+                                <label for="emailAddress">Email Address*</label>
+                                <input type="email" name="emailAddress" id="emailAddress" value="" />
+                                <span id="emailAddressError" class="errors">*required</span>
+                            </div>
+                            <div class="six columns">
+                                <label for="password">Password*</label>
+                                <input type="password" name="password" id="password" value="" pattern=".{6,}" title="Must contain at least 6 or more characters"/>
+                                <span id="passwordError" class="errors">*required</span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="six columns">
+                                <label for="passwordConfirm">Confirm Password*</label>
+                            <input type="password" name="passwordConfirm" id="passwordConfirm" value="" pattern=".{6,}" title="Password much match" />
+                            <span id="passwordConfirmError" class="errors">*required</span>
+                            </div>
+                            <div class="six columns">
+                                <label>Fields marked with a (*) are required</label>
+
+                                <input class="button-primary" type="submit" name="submit" value="Submit" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+            
+    </div>
+    
+    <footer class="footer">
+        <div class="container">
+            <p>Copyright | 2021</p>
+        </div>
+    </footer>
+</body>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#table_id").dataTable();
+
+        $(selector).datepick({
+            dateFormat: 'yyyy-mm-dd'
+        });
+
+
+        $(".jcarousel")
+        .jcarousel({
+            wrap: "circular"
+        })
+        
+        .jcarouselAutoscroll({
+            interval: 3000,
+            target: '+=1',
+            autostart: true,
+        });
+
+    });
+
+</script>
+</html>

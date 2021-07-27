@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+			$(".main").append('<Field class = "Field"></Field>');
+			$(".Field").append('<form id = "currentForm" method = "POST" action = ""></form>');
+
+			$.ajax({
+				type: "GET",
+				url: "form.xml",
+				dataType: "xml",
+				success: function(xml) {
+					$(xml).find('Field').each(function() {
+						var sLabel = $(this).find('Label').text();
+						var sDataType = $(this).find('DataType').text();
+						var sFieldName = $(this).find('FieldName').text();
+						var sIntialValue = $(this).find('InitialValue').text();
+
+						$("#currentForm").append("<Label for = " + sLabel + ">" + sLabel + "</Label>");
+						if (sDataType == "TextArea") {
+							$("#currentForm").append('<br/><textarea name=' + sFieldName + '>' + sIntialValue + '</textarea>');
+						} else {
+							$("#currentForm").append("<input type= " + sDataType + " value=\"" + sIntialValue + "\" name =" + sFieldName + "></Input>");
+						};
+
+						$("#currentForm").append('<br/>');
+
+					});
+				},
+				error: function() {
+					alert("An error occurred while processing XML file.");
+				}
+
+			});
+		});
+	</script>
+	<title>Simple Input Section</title>
+</head>
+
+<body>
+	<div class="container">
+		<div class="card">
+			<div class="main">
+			</div>
+		</div>
+	</div>
+</body>
+<footer style="text-align: center;">
+	<br /><br /><br /><br /><br />
+	<a href="../index.html">Return to Main Page</a><br />
+</footer>
+
+</html>

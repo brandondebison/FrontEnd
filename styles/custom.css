@@ -1,0 +1,30 @@
+.footer{
+    background-color: #41729F;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin: 0px;
+    text-align: center;
+    color: white;
+    /* padding: 1%; */
+}
+
+.center {
+    text-align: center;
+    align-content: center;
+}
+
+.welcome-message {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.card {
+    border-radius: 5px;
+    background-color: #5885AF;
+    padding: 25px 25px;
+}
+
+.title-sections {
+    padding-top: 150px;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>jCarousel Example</title>
+
+
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jcarousel/0.3.9/jquery.jcarousel.min.js"></script>
+  <script type="text/javascript" src="js/jcarousel.basic.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="css/jcarousel.basic.css">
+
+  <script>
+    $(document).ready(function($) {
+
+      $(function() {
+
+        $(".jcarousel")
+          .jcarousel({
+            wrap: "circular"
+          })
+          .jcarouselAutoscroll({
+            interval: 3000,
+            target: '+=1',
+            autostart: true,
+          });
+      });
+
+    });
+  </script>
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <h1 style="text-decoration: underline; text-align: center">jQuery Carousel</h1>
+
+    <!--
+                Mutual wrapper, encloses the carousel and the plugin elements to
+                enable auto-detection of the carousel for the plugins.
+                -->
+    <div class="jcarousel-wrapper">
+
+      <!-- Carousel -->
+      <div class="jcarousel">
+        <ul style="left: -515px; top: 0px;">
+          <li><img name="spiderMan" src="img/spiderMan.png" width="auto" height="auto" alt=""></li>
+          <li><img name="ironMan" src="img/ironMan.png" width="auto" height="auto" alt=""></li>
+          <li><img name="captainAmerica" src="img/captainAmerica.png" width="auto" height="auto" alt=""></li>
+          <li><img name="hulk" src="img/hulk.png" width="auto" height="auto" alt=""></li>
+          <li><img name="captainMarvel" src="img/captainMarvel.png" width="auto" height="auto" alt=""></li>
+        </ul>
+      </div>
+
+      <!-- Prev/next controls -->
+      <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+      <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+      <!-- Pagination -->
+      <p class="jcarousel-pagination">
+
+      </p>
+
+    </div>
+
+  </div>
+
+</body>
+<footer style="text-align: center">
+  <p>
+    Photo Credit:
+  </p>
+  <a href="https://www.iconfinder.com/iconsets/avengers-filled?utm_source=sharing-feature&utm_medium=social&utm_campaign=sharing-feature&utm_content=link">majnun studio</a><br /><br />
+  <a href="index.html">Return to Main Page</a><br />
+
+</footer>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<MyForm>
+  <Field>
+    <Label>First Name: </Label>
+    <DataType>text</DataType>
+    <FieldName>firstName</FieldName>
+    <InitialValue>Enter First Name</InitialValue>
+  </Field>
+  <Field>
+    <Label>Last Name:  </Label>
+    <DataType>text</DataType>
+    <FieldName>lastName</FieldName>
+    <InitialValue>Enter Last Name </InitialValue>
+  </Field>
+  <Field>
+    <Label>Message:  </Label>
+    <DataType>TextArea</DataType>
+    <FieldName>message</FieldName>
+    <InitialValue>Enter Your Message Here</InitialValue>
+  </Field>
+  <Field>
+    <Label></Label>
+    <DataType>Submit</DataType>
+    <FieldName>submit</FieldName>
+    <InitialValue>Submit Data</InitialValue>
+  </Field>
+</MyForm>

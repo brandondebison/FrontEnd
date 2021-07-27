@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Site Structure -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatiable" content="ie-edge">
+
+     <!-- Favicon -->
+    <!-- <link rel="icon" type="image/png" href="./assets/favicon.png"> -->
+
+    <!-- Site Information  -->
+    <title>Brandon's FrontEnd Samples</title>
+    <meta name="description" content="Welcome to my frontend website samples">
+    <meta name="robots" content="index, follow">
+    <meta name="copyright" content="Copyright 2021">
+    <meta name="author" content="Author's Name">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=GOOGLE-KEY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'GOOGLE-KEY');
+    </script> -->
+
+    <!-- CSS Styles -->
+
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/skeleton.css">
+    <link rel="stylesheet" href="./styles/navbar.css">
+
+    <link rel="stylesheet" href="./styles/custom.css">
+
+    <!-- JaveScript  -->
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+        crossorigin="anonymous"></script> -->
+
+    <!-- JavaScript Custom -->
+    <!-- <script src="js/index.js"></script> -->
+    <script src="./js/navbar.js"></script>
+
+
+
+</head>
+
+<body>
+<div class="u-max-full-width">
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <div class="logo links">
+                <a href="/"><img src="./assets/logo.svg" alt="brand-logo"></a>
+            </div>
+            <div class="u-pull-right links">
+                <a href="/"><h5>Home</h5></a>
+                <a href="/"><h5>About</h5></a>
+                <a href="/"><h5>Blog</h5></a>
+                <a href="#contact"><h5>Contact</h5></a>
+
+                <a href="javascript:void(0);" class="icon" onclick="navbar()">&#9776;</a>
+            </div>
+        </div>
+    </nav>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="twelve columns welcome-message">
+            <h2>Welcome to my FrontEnd Sample page!</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="twelve columns">
+            <h6>Below you will find various examples of webpage functions and fun things JavaScript can do for your website.</h6>
+        </div>
+    </div>
+        
+    </div>
+    
+    <footer class="footer">
+        <div class="container">
+            <p>Copyright | 2021</p>
+        </div>
+    </footer>
+</body>
+</html>
